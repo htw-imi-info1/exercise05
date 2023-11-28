@@ -17,7 +17,11 @@ public class MyKara extends Kara
     public void act() 
     {
         
+        
     }  
 
+    public boolean inTunnel(){
+        return (treeLeft() && treeRight());
+    }
    
 }

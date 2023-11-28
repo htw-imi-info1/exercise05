@@ -22,6 +22,16 @@ public class Notebook
         notes = new ArrayList<String>();
     }
 
+    public static Notebook test(){
+        Notebook notebook1 = new Notebook();
+        notebook1.storeNote("a");
+        notebook1.storeNote("b");
+        notebook1.storeNote("b");
+        notebook1.storeNote("b");
+        notebook1.storeNote("c");
+        return notebook1;
+    }
+
     /**
      * Store a new note into the notebook.
      * @param note The note to be stored.
@@ -66,19 +76,30 @@ public class Notebook
         return result;
     }
 
+    
+     public void printAll(){
+        
+        for (String note : notes){
+            System.out.println(note);
+        }
+        
+    }
     public void removeWithIndex(String searchString){
-        for(int i = 0;i<notes.size();i++){
+        
+        for(int i=0;i<notes.size();i++){
+        
             if (notes.get(i).contains(searchString)){
                 notes.remove(i);
             }
         }
+        
     }
-    
+
     public String getNotesWith(String searchString){
         String result = "";
         result = result +"??" +"\n";
         return result;
-    
+
     }
 
 }

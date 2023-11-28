@@ -58,5 +58,27 @@ public class Notebook
         }
     }
 
+    public String getAll(){
+        String result = "";
+        for (String note : notes){
+            result += note+"\n";
+        }
+        return result;
+    }
+
+    public void removeWithIndex(String searchString){
+        for(int i = 0;i<notes.size();i++){
+            if (notes.get(i).contains(searchString)){
+                notes.remove(i);
+            }
+        }
+    }
+    
+    public String getNotesWith(String searchString){
+        String result = "";
+        result = result +"??" +"\n";
+        return result;
+    
+    }
 
 }

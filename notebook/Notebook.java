@@ -22,6 +22,12 @@ public class Notebook
         notes = new ArrayList<String>();
     }
 
+    public static Notebook test2(){
+        Notebook notebook = new Notebook();
+        notebook.storeNote("a");
+        notebook.storeNote("bc");
+        return notebook;
+    }
     public static Notebook test(){
         Notebook notebook1 = new Notebook();
         notebook1.storeNote("a");
@@ -29,6 +35,18 @@ public class Notebook
         notebook1.storeNote("b");
         notebook1.storeNote("b");
         notebook1.storeNote("c");
+        return notebook1;
+    }
+    
+       public static Notebook test3(){
+        Notebook notebook1 = new Notebook();
+        notebook1.storeNote("a");
+        notebook1.storeNote("b");
+        notebook1.storeNote("b");
+        notebook1.storeNote("b");
+        notebook1.storeNote("c");
+        notebook1.removeWithIndex("b");
+        notebook1.printAll();   
         return notebook1;
     }
 
@@ -90,6 +108,7 @@ public class Notebook
         
             if (notes.get(i).contains(searchString)){
                 notes.remove(i);
+                i--;
             }
         }
         
